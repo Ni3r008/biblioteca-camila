@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-rMfkFFWoB2W1/Zx+4bgHim0WC7vKRVrq6FTeZclH1Z4=' 'sha256-sS//9r0XSTU8ifSvnXq2C0rn1U5I0mPyCvzwnOfW92I=' 'sha256-85w8j42R0Tji0PX4y99ui0DPGkvNASbP02WdS0gZ+Uo='; style-src 'unsafe-inline'; img-src 'self' blob:; connect-src https://pspcqxoiwhasxcmikefz.supabase.co https://graphql.anilist.co; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Entre páginas | Minha biblioteca</title><style>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-rMfkFFWoB2W1/Zx+4bgHim0WC7vKRVrq6FTeZclH1Z4=' 'sha256-sS//9r0XSTU8ifSvnXq2C0rn1U5I0mPyCvzwnOfW92I=' 'sha256-DJeTtRpnW9w/sQ2EtZGr1sJtuse9q6+AEEMtsOJB1FM='; style-src 'unsafe-inline'; img-src 'self' blob:; connect-src https://pspcqxoiwhasxcmikefz.supabase.co https://graphql.anilist.co; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Entre páginas | Minha biblioteca</title><style>
 /* aura:start */
 :root{--page:#faefe8;--card:#fff;--ink:#0c1a22;--muted:#394750;--faint:#637078;--line:#d9d4d1;--accent:#7b4dfd;--accent-text:#6a49d3;--accent-soft:#dddbff;--link:#5a41b1;--success:#477900;--error:#c20d3f;--shadow:0 2px 8px rgba(51,35,30,.05)}
 /* aura:end */
@@ -265,7 +265,7 @@ function resetStatistics(){statisticsPhase='atualizando';statisticsReadPending=f
 function renderStatistics(){
  if(!session)return;
  const set=(id,value)=>{const node=$(id);if(node)node.textContent=value;},list=$('statsList');
- set('statsAvailable','não confirmado');
+ set('statsAvailable','1 GB no plano gratuito (limite compartilhado, não atualizado automaticamente)');
  set('statsUsage',($('storageUsage')?.textContent||'Ainda não calculado').replace(/^Biblioteca: /,'').replace(/ · Espaço disponível não confirmado$/,''));
  list?.replaceChildren();
  if(statisticsPhase!=='pronto'){
